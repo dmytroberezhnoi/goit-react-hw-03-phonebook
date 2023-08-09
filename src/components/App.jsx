@@ -78,7 +78,17 @@ export class App extends React.Component {
           onSubmit={this.addContact}
           contacts={this.state.contacts}
         />
-        {this.state.contacts.length === 0 ? (
+        {this.state.contacts.length !== 0 && (
+          <>
+            <h2 className={css.title}>Contacts</h2>
+            <Filter value={this.state.filter} onChange={this.changeFilter} />
+            <СontactList
+              visibleCont={visibleContacts}
+              deleteContacts={this.deleteContact}
+            />
+          </>
+        )}
+        {/* {this.state.contacts.length === 0 ? (
           <span></span>
         ) : (
           <>
@@ -89,7 +99,7 @@ export class App extends React.Component {
               deleteContacts={this.deleteContact}
             />
           </>
-        )}
+        )} */}
       </>
     );
   }
