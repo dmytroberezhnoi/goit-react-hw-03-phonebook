@@ -88,18 +88,6 @@ export class App extends React.Component {
             />
           </>
         )}
-        {/* {this.state.contacts.length === 0 ? (
-          <span></span>
-        ) : (
-          <>
-            <h2 className={css.title}>Contacts</h2>
-            <Filter value={this.state.filter} onChange={this.changeFilter} />
-            <СontactList
-              visibleCont={visibleContacts}
-              deleteContacts={this.deleteContact}
-            />
-          </>
-        )} */}
       </>
     );
   }
